@@ -1,10 +1,11 @@
-import os
 import json
+import os
+
 import yaml
 
 
 def get_file_format(file_path):
-    _, extension =  os.path.splitext(file_path)
+    _, extension = os.path.splitext(file_path)
     return extension[1:]
 
 
