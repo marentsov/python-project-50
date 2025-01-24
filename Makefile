@@ -10,5 +10,5 @@ make lint:
 	uv run ruff check gendiff
 make tests:
 	uv run pytest
-make tests-coverage:
+make test-coverage:
 	uv run pytest --cov
