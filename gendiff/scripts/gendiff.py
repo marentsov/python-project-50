@@ -1,8 +1,9 @@
 import argparse
 
-from gendiff.scripts.generate_diff import generate_diff
+from gendiff.scripts.find_diff import find_diff
 from gendiff.scripts.parser import parse_data_from_file
 from gendiff.formatters.format_identifier import format_identifier
+from gendiff.scripts.generate_diff import generate_diff
 
 
 def parser_function():
@@ -12,7 +13,7 @@ def parser_function():
     parser.add_argument('first_file')
     parser.add_argument('second_file')
     parser.add_argument("-f", "--format",
-                        help='set format of output'
+                        help='set format of output',
                         default='stylish', type=str
     )
 
@@ -25,13 +26,10 @@ def main():
     file_path1 = args.first_file
     file_path2 = args.second_file
 
-    file1 = parse_data_from_file(file_path1)
-    file2 = parse_data_from_file(file_path2)
+    result = generate_diff(file_path1, file_path2, formatter='stylish')
+    print(result)
 
-    diff = generate_diff(file1, file2)
-    format_diff = format_identifier(diff, formatter)
 
-    print(format_diff)
 
 
 if __name__ == "__main__":
