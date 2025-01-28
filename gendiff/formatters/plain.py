@@ -1,7 +1,7 @@
 def format_value(value):
     if isinstance(value, (dict, list)):
         return '[complex value]'
-    elif value == None:
+    elif value is None:
         return 'null'
     elif isinstance(value, bool):
         return str(value).lower()
@@ -40,7 +40,7 @@ def make_plain_diff(diff, path=''):
     result = []
     for item in diff:
         formatted_item = make_plain_item(item, path)
-        if formatted_item != None:
+        if formatted_item is not None:
             result.append(formatted_item)
 
     return '\n'.join(result)
