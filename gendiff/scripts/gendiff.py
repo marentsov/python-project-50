@@ -1,8 +1,5 @@
 import argparse
 
-from gendiff.scripts.find_diff import find_diff
-from gendiff.scripts.parser import parse_data_from_file
-from gendiff.formatters.format_identifier import format_identifier
 from gendiff.scripts.generate_diff import generate_diff
 
 
@@ -28,8 +25,6 @@ def main():
 
     result = generate_diff(file_path1, file_path2, formatter='stylish')
     print(result)
-
-
 
 
 if __name__ == "__main__":
