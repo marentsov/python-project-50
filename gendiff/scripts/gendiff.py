@@ -23,7 +23,7 @@ def main():
     file_path1 = args.first_file
     file_path2 = args.second_file
 
-    result = generate_diff(file_path1, file_path2, formatter='stylish')
+    result = generate_diff(file_path1, file_path2, formatter=args.format)
     print(result)
 
 
