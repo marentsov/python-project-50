@@ -1,0 +1,16 @@
+            }
+        }
+    },
+    {
+        "action": "added",
+        "name": "group3",
+        "new_value": {
+            "deep": {
+                "id": {
+                    "number": 45
+                }
+            },
+            "fee": 100500
+        }
+    }
+]
