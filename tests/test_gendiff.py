@@ -12,11 +12,9 @@ from gendiff.scripts.parser import parse_data_from_file, read_file
      'tests/test_data/file2.yaml',
      'tests/test_data/expected_result_yaml.txt')])
 def test_generate_diff(file_path1, file_path2, expected_result):
-    file1 = parse_data_from_file(file_path1)
-    file2 = parse_data_from_file(file_path2)
-    diff = generate_diff(file1, file2)
-    expected = read_file(expected_result)
-    assert diff == expected
+    diff = generate_diff(file_path1, file_path2, formatter="stylish")
+    expected = read_file(expected_result).strip()
+    assert diff.strip() == expected
 
 
 
