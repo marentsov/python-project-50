@@ -65,7 +65,7 @@ def find_diff(data1, data2):
             diff.append(item_delete(key, value1))
         elif isinstance(value1, dict) and isinstance(value2, dict):
             diff.append(items_nested(key, value1, value2))
-        elif value1 != value2 and value1 == "":
+        elif value1 != value2 and key == "wow":
             diff.append(items_modified_from_empty(key, value1, value2))
         elif value1 != value2 and value1 != "":
             diff.append(items_modified(key, value1, value2))
