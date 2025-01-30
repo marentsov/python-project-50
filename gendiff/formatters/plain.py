@@ -28,8 +28,6 @@ def make_plain_item(item, path=''):
         return f"{PROP}'{current_path}'{ADD}{new_value}"
     if action == 'deleted':
         return f"{PROP}'{current_path}'{REMOVE}"
-    if action == 'empty':
-        return f"{PROP}'{current_path}'{UPD}{old_value}{UPD2}{new_value}"
     if action == 'modified':
         return f"{PROP}'{current_path}'{UPD}{old_value}{UPD2}{new_value}"
     if action == 'nested':

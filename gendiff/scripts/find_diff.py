@@ -31,15 +31,6 @@ def items_modified(key, value1, value2):
     }
 
 
-def items_modified_from_empty(key, value1, value2):
-    return {
-        'action': 'empty',
-        'name': key,
-        'new_value': value2,
-        'old_value': value1
-    }
-
-
 def items_nested(key, value1, value2):
     return {
         'action': 'nested',
@@ -65,9 +56,7 @@ def find_diff(data1, data2):
             diff.append(item_delete(key, value1))
         elif isinstance(value1, dict) and isinstance(value2, dict):
             diff.append(items_nested(key, value1, value2))
-        elif value1 == "" and key == "wow":
-            diff.append(items_modified_from_empty(key, value1, value2))
-        elif value1 != value2 and value1 != "":
+        elif value1 != value2:
             diff.append(items_modified(key, value1, value2))
         else:
             diff.append(items_unchanged(key, value1))

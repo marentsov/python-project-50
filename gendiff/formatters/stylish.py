@@ -36,9 +36,6 @@ def make_stylish_diff(diff, spaces_count=2):
         elif action == "modified":
             lines.append(f"{indent}{DEL}{key}: {old_value}")
             lines.append(f"{indent}{ADD}{key}: {new_value}")
-        elif action == "empty":
-            lines.append(f"{indent}{DEL}{key}:")
-            lines.append(f"{indent}{ADD}{key}: {new_value}")
         elif action == "deleted":
             lines.append(f"{indent}{DEL}{key}: {old_value}")
         elif action == "added":
