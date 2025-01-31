@@ -25,9 +25,10 @@ jobs:
         run: |
           make tests
       - name: Test & publish code coverage
-        uses: paambaati/codeclimate-action@v5.0.0
+        uses: paambaati/codeclimate-action@v4.0.0
+        if: github.ref_name == 'main'
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID_2}}
+          CC_TEST_REPORTER_ID: ${{ secrets.TEST_COVERAGE }}
         with:
-          coverageCommand: uv run pytest --cov
+          CoverageCommand: make tests-coverage
           debug: true
