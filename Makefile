@@ -11,4 +11,4 @@ make lint:
 make tests:
 	uv run pytest
 make test-coverage:
-	uv run pytest --cov
+	uv run pytest --cov=gendiff --cov-report=xml
