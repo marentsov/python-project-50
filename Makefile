@@ -9,6 +9,6 @@ package-install:
 make lint:
 	uv run ruff check gendiff
 make tests:
-	uv run pytest
+	uv run pytestdd
 make test-coverage:
 	uv run pytest --cov=gendiff --cov-report=xml

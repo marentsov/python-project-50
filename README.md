@@ -56,18 +56,22 @@ uv run gendiff tests/test_data/(первый файл) tests/test_data/(втор
 uv run gendiff -f stylish tests/test_data/(первый файл) tests/test_data/(второй файл)
 ``````
 демонстрация:
+[![asciicast](https://asciinema.org/a/ESeliouMt8uJzK0fao28xQYur.svg)](https://asciinema.org/a/ESeliouMt8uJzK0fao28xQYur)
+[![asciicast](https://asciinema.org/a/5ikY7E1Wp4xJ3gSG0zoXcHrEh.svg)](https://asciinema.org/a/5ikY7E1Wp4xJ3gSG0zoXcHrEh)
 ***
 - **plain** 
 ````
 uv run gendiff -f plain tests/test_data/(первый файл) tests/test_data/(второй файл)
 ````
 демонстрация:
+[![asciicast](https://asciinema.org/a/Jh88SxeXocavdT5k1FCy3jC33.svg)](https://asciinema.org/a/Jh88SxeXocavdT5k1FCy3jC33)
 ***
 - **json**
 ````
 uv run gendiff -f json tests/test_data/(первый файл) tests/test_data/(второй файл)
 ````
 демонстрация: 
+[![asciicast](https://asciinema.org/a/hMMs5vpsWZp71MRt8s3aPd0se.svg)](https://asciinema.org/a/hMMs5vpsWZp71MRt8s3aPd0se)
 *** 
 
 
