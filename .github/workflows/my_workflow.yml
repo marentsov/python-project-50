@@ -29,5 +29,5 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID_2}}
         with:
-          coverageCommand: make test-coverage
+          coverageCommand: uv run pytest --cov
           debug: true
