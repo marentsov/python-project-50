@@ -21,14 +21,10 @@ jobs:
       - name: Run linter and pytest
         run: |
           make lint
-      - name: Run pytest
-        run: |
-          make tests
       - name: Test & publish code coverage
-        uses: paambaati/codeclimate-action@v4.0.0
-        if: github.ref_name == 'main'
+        uses: paambaati/codeclimate-action@v5.0.0
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.TEST_COVERAGE }}
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID}}
         with:
-          CoverageCommand: make tests-coverage
+          coverageCommand: make test
           debug: true
